@@ -1,0 +1,4 @@
+template: !include_dir_merge_list template #if you not have this line, you need to adapt your code
+sensor: !include_dir_merge_list sensor #if you not have this line, you need to adapt your code
+utility_meter: !include_dir_merge_named utility_meter #if you not have this line, you need to adapt your code
+modbus: !include modbus.yaml #add this line if you not have configured previusly with other modbus device
