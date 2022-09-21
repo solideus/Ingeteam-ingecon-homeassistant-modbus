@@ -1,0 +1,36 @@
+- sensor: 
+  - name: "Solar Potencia PV"
+    unit_of_measurement: "W"
+    state: > 
+      {% set pv1 = states('sensor.solar_potencia_pv1') | float %}
+      {% set pv2 = states('sensor.solar_potencia_pv2') | float %}
+      {{ ((pv1 + pv2)) | round(0, default=0) }}
+    unique_id: sensor.solar_potencia_pv
+  - name: "Solar Potencia Bateria Carga"
+    unit_of_measurement: "W"
+    state: >
+      {% if states('sensor.solar_potencia_bateria')|float <= 0 %}
+      {{ -((states('sensor.solar_potencia_bateria'))|int) }} 
+      {% endif %}
+    unique_id: sensor.solar_potencia_bateria_carga
+  - name: "Solar Potencia Bateria Descarga"
+    unit_of_measurement: "W"
+    state: >
+      {% if states('sensor.solar_potencia_bateria')|float >= 0 %}
+      {{ (states('sensor.solar_potencia_bateria')) }}
+      {% endif %}
+    unique_id: sensor.solar_potencia_bateria_descarga
+  - name: "Solar Potencia Red Volcado"
+    unit_of_measurement: "W"
+    state: >
+      {% if states('sensor.solar_potencia_grid')|float <= 0 %}
+      {{ -((states('sensor.solar_potencia_grid'))|int) }} 
+      {% endif %}
+    unique_id: sensor.solar_potencia_red_volcado
+  - name: "Solar Potencia Red Consumo"
+    unit_of_measurement: "W"
+    state: >
+      {% if states('sensor.solar_potencia_grid')|float >= 0 %}
+      {{ (states('sensor.solar_potencia_grid')) }}
+      {% endif %}
+    unique_id: sensor.solar_potencia_red_consumo
