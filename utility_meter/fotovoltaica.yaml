@@ -1,0 +1,12 @@
+solar_energia_pv_hoy:
+  source: sensor.solar_energia_pv
+  cycle: daily
+  unique_id: sensor.solar_energia_pv_hoy
+solar_energia_bateria_descarga_hoy:
+  source: sensor.solar_energia_bateria_descarga
+  cycle: daily
+  unique_id: sensor.solar_energia_bateria_descarga_hoy
+solar_energia_bateria_carga_hoy:
+  source: sensor.solar_energia_bateria_carga
+  cycle: daily
+  unique_id: sensor.solar_energia_bateria_carga_hoy
