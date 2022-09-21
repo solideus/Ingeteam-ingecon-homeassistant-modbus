@@ -1,0 +1,70 @@
+- type: tcp
+  name: "solar"
+  host: # ip of ingecon in local wifi lan
+  port: 502
+  sensors:
+    - name: Solar Potencia Grid
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 71
+      unique_id: sensor.solar_potencia_grid
+    - name: Solar Potencia Bateria
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 19
+      unique_id: sensor.solar_potencia_bateria
+    - name: Solar Potencia Inversor grid
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 51
+      unique_id: sensor.solar_potencia_inversor_grid
+    - name: Solar Potencia Inversor criticas
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 46
+      unique_id: sensor.solar_potencia_inversor_criticas
+    - name: Solar Potencia Inversor
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 37
+      unique_id: sensor.solar_potencia_inversor
+    - name: Solar Potencia PV1
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 33
+      unique_id: sensor.solar_potencia_pv1
+    - name: Solar Potencia PV2
+      scan_interval: 5
+      data_type: int16
+      input_type: input
+      unit_of_measurement: W
+      slave: 1
+      address: 36
+      unique_id: sensor.solar_potencia_pv2
+    - name: Solar bateria carga
+      scan_interval: 15
+      data_type: uint16
+      input_type: input
+      unit_of_measurement: "%"
+      slave: 1
+      address: 20
+      unique_id: sensor.solar_bateria_carga
+      
