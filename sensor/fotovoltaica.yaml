@@ -1,0 +1,40 @@
+- platform: integration
+  source: sensor.solar_potencia_bateria_carga
+  name: Solar Energía Batería Carga
+  unique_id: sensor.solar_energia_bateria_carga
+  unit_prefix: k
+  unit_time: h
+  round: 2
+  method: right
+- platform: integration
+  source: sensor.solar_potencia_bateria_descarga
+  name: Solar Energía Batería Descarga
+  unique_id: sensor.solar_energia_bateria_descarga
+  unit_prefix: k
+  unit_time: h
+  round: 2
+  method: right
+- platform: integration
+  source: sensor.solar_potencia_pv
+  name: Solar Energía PV
+  unique_id: sensor.solar_energia_pv
+  unit_prefix: k
+  unit_time: h
+  round: 2
+  method: right
+- platform: integration
+  source: sensor.solar_potencia_red_consumo
+  name: Solar Energía Red Consumo
+  unique_id: sensor.solar_energia_red_consumo
+  unit_prefix: k
+  unit_time: h
+  round: 2
+  method: right
+- platform: integration
+  source: sensor.solar_potencia_red_volcado
+  name: Solar Energía Red Volcado
+  unique_id: sensor.solar_energia_red_volcado
+  unit_prefix: k
+  unit_time: h
+  round: 2
+  method: right
